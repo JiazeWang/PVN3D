@@ -180,7 +180,7 @@ class LM_Dataset():
 
         msk_back = (labels <= 0).astype(rgb.dtype)
         msk_back = np.repeat(msk_back[:, :, None], 3, 2)
-        imshow("msk_back", msk_back)
+        #imshow("msk_back", msk_back)
         rgb = rgb * (msk_back==0).astype(rgb.dtype) + back * msk_back
 
         dpt = dpt * (dpt_msk > 0).astype(dpt.dtype) + \
