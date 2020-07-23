@@ -6,9 +6,9 @@ import numpy as np
 import pickle as pkl
 import time
 from sklearn.cluster import MeanShift
-from neupeak.utils.webcv2 import imshow, waitKey
+#from neupeak.utils.webcv2 import imshow, waitKey
 # from lib.utils.my_utils import my_utils
-
+from cv2 import imshow, waitKey
 
 def gaussian_kernel(distance, bandwidth):
     return (1 / (bandwidth * torch.sqrt(2 * torch.tensor(np.pi)))) \
